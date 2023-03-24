@@ -1,0 +1,15 @@
+{% if flash['success'] %}
+<div class="alert alert-success text-center bottom-gap">
+
+	{{ flash['success'] | first  }}
+
+</div>
+{% endif %}
+
+{% if flash['error'] %}
+<div class="alert alert-danger text-center bottom-gap">
+
+	{{ flash['error'] | first  }}
+
+</div>
+{% endif %}

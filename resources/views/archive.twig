@@ -1,0 +1,37 @@
+{% extends 'app.twig' %}
+
+{% block content %}
+
+<div class="row bottom-gap mt-4">
+	<div class="col-md-8 offset-md-2">
+		<h1 class="display-4 text-center headline">All Stored Files</h1>
+	</div>
+</div>
+
+<div class="row bottom-gap">
+	<div class="col-md-8 offset-md-2">
+		<p class="h5 text-justify">Below is a list of all encrypted files stored in the app, click on one to download the file.</p>
+	</div>
+</div>
+
+<div class="container bottom-gap">
+	<div class="row">
+		<div class="col-md-8 offset-md-2">
+            <p class="text-center lead"><mark>{{ files|length }}</mark> files Stored</p>
+            <ul class="navbar-nav">
+                {% for file in files %}
+                    <li>
+                        <form method="POST" name="getFileForm" action="" id="getFileForm">
+                            <div class="form-group text-center">
+                                <input type="hidden" name="file" value="{{ file }}">
+                                <button type="submit" class="btn btn-info">{{ file }}</button>
+                            </div>
+                        </form>
+                    </li>
+                {% endfor %}
+            </ul>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

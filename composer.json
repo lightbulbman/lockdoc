@@ -1,0 +1,21 @@
+{
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.6",
+        "php-di/php-di": "^7.0",
+        "slim/twig-view": "^3.3",
+        "vlucas/phpdotenv": "^5.5",
+        "maennchen/zipstream-php": "^3.0",
+        "phpseclib/phpseclib": "~3.0",
+        "phpoffice/phpword": "^1.0",
+        "slim/flash": "^0.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lockdoc\\": "app"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.2"
+    }
+}
